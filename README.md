@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/bitbydat/Slide">
+  <a href="https://github.com/bitbydat/Self-Balancing-Car">
     <img src="images/diagram1.png" alt="Logo" width="800" height="420">
   </a>
 
@@ -55,8 +55,8 @@ The objective of this project is to build a two-wheeled self-balancing car using
 ## Getting Started
 <br />
 <div align="center">
-  <a href="https://github.com/bitbydat/Slide">
-    <img src="images/diagram1.png" alt="Logo" width="500" height="450">
+  <a href="https://github.com/bitbydat/Self-Balancing-Car">
+    <img src="images/diagram3.png" alt="Logo" width="500" height="450">
   </a>
 </div>
 <p align="justify">
