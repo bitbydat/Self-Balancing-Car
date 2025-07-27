@@ -60,15 +60,20 @@ The objective of this project is to build a two-wheeled self-balancing car using
   </a>
 </div>
 <p align="justify">
-The project's deployment diagram is shown here. For WiFi communication between the system, we selected the low-cost MCU ESP8266, and chose the Thingsboard IoT Platform to monitor and control various types of endpoints via MQTT protocol. For edge computing, we used Thingsboard Edge, and for cloud computing, the Live Demo Server. Since it is an opensource platform, there is absolutely no expense involved. </p>
+I chose the MPU6050 accelerometer and gyroscope sensor to calculate the tilt angle of the car, then applied a Kalman filter to smooth the data. The tilt angle, angular velocity, and control commands received from the HC-05 module are used as inputs to the PID controller. The output of the PID controller is used to generate PWM voltage signals to control the two DC motors. </p>
 
 ### Prerequisites
-Before getting started with the project, you will need the following:
-| Hardware | Software |
+Before getting started with this project, you will need to prepare some stuffs:
+| Hardware | Reason for Selection |
 |----------|----------|
-|A Raspberry Pi 3 or PC or any other IoT device that runs on Linux.|Raspbian Buster installed on your Raspberry Pi 3 or Debian (Ubuntu) installed on your PC.|
-|NodeMCU ESP8266 for WiFi communication and devices you want to control (lights, temperature sensors, etc.).|Basic understanding of programming micro controller in C/C++, IoT network protocols and devices wiring.|
-|A router to create a wireless local area network, with an internet connection to connect your Raspberry Pi to the internet.|An internet browser and mobile application to access the user interface of the smart home system.
+|x01 STM32F103C8 microcontroller| A low-cost and high-performance 32-bit microcontroller, featuring I2C and UART interfaces |
+|x01 MPU6050 accelerometer and gyroscope sensor| Combines a 3‑axis accelerometer and a 3‑axis gyroscope. Operates at 3.3–5V with an I2C interface (up to 400 kHz clock speed)|
+|x01 DRV8833 motor driver| Dual H‑Bridge motor driver capable of driving two DC geared motors. Input voltages range of 3V-10V and provides output current up to 1.5A RMS|
+|x02 DC gear motors (encoders optional but recommended)| Operating voltage 5V–7V. No‑load current ≤ 0.5A and speed ranges from 100–200 RPM @5V |
+|x01 LM2596 DC-DC converter| Wide input voltage range: 4.5–30V and up to 3A output current|
+|x02 18650 batteries| Two cells in series provide 7.4–8.1 V, suitable for LM2596 input to maintain a 5V output|
+|x01 robot chassis with wheels| Optional design depending on project scope|
+
 
 ### Installation
 
