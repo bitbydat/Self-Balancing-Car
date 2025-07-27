@@ -1,0 +1,28 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "cortex-debug.gdbPath": "C:/gcc-arm-none-eabi/bin/arm-none-eabi-gdb",
+    "cortex-debug.openocdPath": "C:/openocd/bin/openocd",
+    "terminal.integrated.profiles.windows": {
+        "MSYS2": {
+            "path": "C://msys64/msys2_shell.cmd",
+            "args": [
+                "-defterm",
+                "-here",
+                "-no-start",
+                "-mingw64"
+            ]
+        }
+    },
+    "files.associations": {
+        "allheader.h": "c",
+        "stm32f10x.h": "c",
+        "stdint.h": "c",
+        "bluetooth.h": "c",
+        "uart_drive.h": "c",
+        "pid.h": "c",
+        "mpu6050.h": "c",
+        "hc05.h": "c",
+        "kf.h": "c"
+    }
+
+}
