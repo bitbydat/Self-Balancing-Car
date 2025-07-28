@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/bitbydat/Self-Balancing-Car">
-    <img src="images/diagram1.png" alt="Logo" width="800" height="420">
+    <img src="images/car2.jpg" alt="Logo" width="600" height="600">
   </a>
 
 <h3 align="center">Two-Wheeled Self-Balancing Robot</h3>
