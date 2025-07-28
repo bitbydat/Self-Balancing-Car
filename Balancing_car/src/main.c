@@ -33,7 +33,7 @@ int main(void)
 			PWM_Update_Value(&pwm);
 		  	if(Car_Safety_Check(tilt_angle) == VALID) 
 			{
-				PWM_Set(pwm.motorL, pwm.motorR); 
+			 PWM_Set(pwm.motorL, pwm.motorR); 
 			}
 			measure_due_flag = 0;
 		}
