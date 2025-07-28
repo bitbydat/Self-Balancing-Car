@@ -44,24 +44,18 @@ void Clock_init(void)
 {
     //if 48 MHz < SYSCLK < 72 MHz, the SYSCLK wait two states to the FLASH access time
 	FLASH->ACR |= FLASH_ACR_LATENCY_2;
-    
     //Enable HSE clock
 	RCC->CR |= RCC_CR_HSEON;
     while(!(RCC->CR & RCC_CR_HSERDY));
-    
     //Select PLL source as HSE clock 8MHz
 	RCC->CFGR |= RCC_CFGR_PLLSRC_HSE;
-    
     //Multiple PLL input clock by 9 
 	RCC->CFGR |= RCC_CFGR_PLLMULL9;
-
     //Divide APB1 by 2 (36MHz max)
 	RCC->CFGR |= RCC_CFGR_PPRE1_2;
-    
     //Enbale PLL clock
 	RCC->CR |= RCC_CR_PLLON;
     while(!(RCC->CR & RCC_CR_PLLRDY));
-    
     //Select SYSCLK source as PLL clock
 	RCC->CFGR |= RCC_CFGR_SW_PLL;
     while(!(RCC->CFGR & RCC_CFGR_SWS_PLL));
@@ -113,7 +107,7 @@ uint8_t Button_Debounce(uint8_t Port, uint8_t Pin)
 		case 1:  IDR = (volatile uint32_t *)(&GPIO_A + offset); break;
 		case 2:  IDR = (volatile uint32_t *)(&GPIO_B + offset); break;
 		case 3:  IDR = (volatile uint32_t *)(&GPIO_C + offset); break;
-		default: IDR = NULL; 									break;
+		default: IDR = NULL; 					break;
 	}
  	state = (state<<1) | (uint16_t)((*IDR & (1<<Pin))>>Pin) ;
   	return (state == 0x000F);
