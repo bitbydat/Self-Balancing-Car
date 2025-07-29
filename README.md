@@ -74,7 +74,7 @@ To get started with this project, you will need to prepare some items:
 
 <div align="center">
   <a href="https://github.com/bitbydat/Self-Balancing-Car">
-    <img src="images/Presentation1.jpg" alt="Logo" width="1000" height="700">
+    <img src="images/Presentation1.jpg" alt="Logo" width="1100" height="700">
   </a>
 </div>
 
@@ -93,7 +93,7 @@ My program uses three types of interrupts to update data and button control flag
 - The Timer interrupt sets the IsMeasureDue flag, allowing readings the MPU6050 sensor at precise 5ms intervals.  
 - The EXTI interrupt is used to update the state of buttons that control the vehicle.</p>
 
-Within the super loop, the program continuously cycles through a set of functions:
+In the super loop, the program continuously cycles through a set of functions:
 - Update the control flags associated with button inputs
 - Process Bluetooth commands, converting them into values, which are used as PID controller 2's inputs to calculate motor PWM values.
 - Data is read from the MPU6050 using I2C. The tilt angle is calculated using both accelerometer and gyroscope data. A Kalman filter is appllied to minimize noise and improve data stability.
@@ -102,20 +102,25 @@ Within the super loop, the program continuously cycles through a set of function
 
 For a more details, please check the source code
 
-
-
-
-
 ### Installation
 
+This project uses the ***arm‑none‑eabi‑gcc*** toolchain to compile through ***Makefile*** and supports debugging with ***OpenOCD & GDB*** or with ***J‑Link***, so you’ll need to install the required tools before getting started.
 1. Clone the repo:
    ```sh
    git clone https://github.com/bitbydat/Self-Balancing-Car.git
-2. Create a Thingsboard account at https://demo.thingsboard.io/ and login to use Thingsboard Live Demo server. Then go to [Thingsboard](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Thingsboard) for a quick overview of this open-source IoT platform.
-3. Follow the instructions to install [Thingsboard Edge CE](https://thingsboard.io/docs/user-guide/install/edge/installation-options/) v3.4.3 and provision your Edge to the Server.
-4. Get and install the ThingsBoardLive on [App Store](https://apps.apple.com/us/app/thingsboard-live/id1594355695) or [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.demo.app&hl=vi&gl=US).
-5. Please refer to [ESP8266](https://github.com/hungdaqq/Smarthome-IoT/tree/main/ESP8266) for setting up micro controllers programming evironment and [Features](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Features) for ThingsBoard configuration as well as connecting the electronics components in accordance with the hardware schema.
-6. (Optional) Follow the instructions to install [Thingsboard IoT Gateway](https://thingsboard.io/docs/iot-gateway/installation/) v2.9 on your Raspberry Pi or PC if you want integrate devices that are connected to legacy and third-party systems with ThingsBoard IoT platform. For example: external MQTT brokers, OPC-UA servers, Sigfox Backend, Modbus slaves or CAN nodes.
+2. Download the [GNU Arm Embedded Toolchain](https://developer.arm.com/downloads/-/gnu-rm), which includes  arm‑none‑eabi‑gcc,   arm‑none‑eabi‑gdb,  and the accompanying utilities.
+3. Follow the instructions to install [MSYS2](https://www.msys2.org/), open MSYS2 terminal and run this commands to install GNU make
+    ```sh
+    pacman -Syu
+    pacman -S make
+  Run this to check if Make is installed completely
+   ```sh
+     make --v
+   ```
+
+5. Download the latest version of [OpenOCD](https://github.com/xpack-dev-tools/openocd-xpack/releases) for debugging
+6. Download the [ST-LINK utility](https://www.st.com/en/development-tools/stsw-link004.html) or [J-link Software](https://www.segger.com/downloads/jlink/) to flash firmware to the microcontroller.
+   
 
 <!-- USAGE EXAMPLES -->
 ## Usage
