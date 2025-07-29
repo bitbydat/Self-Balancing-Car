@@ -113,7 +113,7 @@ This project uses the ***arm‑none‑eabi‑gcc*** toolchain to compile through
     ```sh
     pacman -Syu
     pacman -S make
-  Run this to check if Make is installed completely
+Run this to check if Make is installed completely
    ```sh
      make --v
    ```
@@ -125,24 +125,8 @@ This project uses the ***arm‑none‑eabi‑gcc*** toolchain to compile through
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Start Edge service by running the script:
-   ```sh
-   sudo service tb-edge start
-   ```
-2. Access the user interface by opening a web browser and navigating to https://demo.thingsboard.io/home or using ThingsBoardLive mobile application.
-3. Use the interface to control the devices and other features in your home.
-
-
 <!-- ROADMAP -->
 ## Roadmap and Future work
-
-- [x] Indoor temperature monitoring
-- [x] Outdoor temperature, humidity monitoring (with OpenWeather API)
-- [x] Light and Household applicances control
-- [x] Create alarms, send emails and notifications.
-- [ ] Power consumption and charging monitoring
-- [ ] Devices claming (QR code)
-- [ ] Data analytics with Trendz
 
 <!-- CONTRIBUTING -->
 ## Contributing
