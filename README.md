@@ -49,7 +49,15 @@
 ## About The Project
 
 <p align="justify">
-The objective of this project is to build a two-wheeled self-balancing car using a accelerometer sensor and a PID control algorithm to control the motors via PWM signals. Additionally, this car can receive commands from a mobile app via Bluetooth to move forward, backward, turn left, or turn right. </p>
+The objective of this project is to build a two-wheeled self-balancing car using a accelerometer sensor and a PID control algorithm to control the motors via PWM signals. Additionally, this car can receive commands from a mobile app via Bluetooth to move forward, backward, turn left, or turn right. 
+
+<div align="center">
+  <a href="https://github.com/bitbydat/Self-Balancing-Car">
+    <img src="images/diagram3.png" alt="Logo" width="500" height="450">
+  </a>
+</div>
+<p align="justify">
+I chose the MPU6050 accelerometer and gyroscope sensor to calculate the tilt angle of the car, then applied a Kalman filter to smooth the data. The tilt angle, angular velocity, and control commands received from the HC-05 module are used as inputs to the PID controller. The output of the PID controller is used to generate PWM voltage signals to control the two DC motors. </p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
