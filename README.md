@@ -74,6 +74,13 @@ Before getting started with this project, you will need to prepare some stuffs:
 |x02 18650 batteries| Two cells in series provide 7.4–8.1 V, suitable for LM2596 input to maintain a 5V output|
 |x01 robot chassis with wheels| Optional design depending on project scope|
 
+<div align="center">
+  <a href="https://github.com/bitbydat/Self-Balancing-Car">
+    <img src="images/flowchart.png" alt="Logo" width="500" height="700">
+  </a>
+</div>
+
+
 
 ### Installation
 
