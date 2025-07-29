@@ -61,17 +61,7 @@ I chose the MPU6050 accelerometer and gyroscope sensor to calculate the tilt ang
 
 <!-- GETTING STARTED -->
 ## Getting Started
-<br />
-<div align="center">
-  <a href="https://github.com/bitbydat/Self-Balancing-Car">
-    <img src="images/diagram3.png" alt="Logo" width="500" height="450">
-  </a>
-</div>
-<p align="justify">
-I chose the MPU6050 accelerometer and gyroscope sensor to calculate the tilt angle of the car, then applied a Kalman filter to smooth the data. The tilt angle, angular velocity, and control commands received from the HC-05 module are used as inputs to the PID controller. The output of the PID controller is used to generate PWM voltage signals to control the two DC motors. </p>
-
-### Prerequisites
-Before getting started with this project, you will need to prepare some stuffs:
+To get started with this project, you will need to prepare some items:
 | Hardware | Reason for Selection |
 |----------|----------|
 |x01 STM32F103C8 microcontroller| A low-cost and high-performance 32-bit microcontroller, featuring I2C and UART interfaces |
@@ -84,15 +74,35 @@ Before getting started with this project, you will need to prepare some stuffs:
 
 <div align="center">
   <a href="https://github.com/bitbydat/Self-Balancing-Car">
-    <img src="images/Presentation1.jpg" alt="Logo" width="800" height="500">
+    <img src="images/Presentation1.jpg" alt="Logo" width="1000" height="700">
   </a>
 </div>
+
+  
+Now that the hardware setup is complete, let's move on to the software developement. Below is the flowchart of the system, let's take a look.
 
 <div align="center">
   <a href="https://github.com/bitbydat/Self-Balancing-Car">
     <img src="images/flowchartv2.png" alt="Logo" width="600" height="800">
   </a>
-</div>
+</div>  
+
+
+My program uses three types of interrupts to update data and button control flags:
+- The USART interrupt is used to receive Bluetooth commands sent from a mobile app.  
+- The Timer interrupt sets the IsMeasureDue flag, allowing readings the MPU6050 sensor at precise 5ms intervals.  
+- The EXTI interrupt is used to update the state of buttons that control the vehicle.</p>
+
+Within the super loop, the program continuously cycles through a set of functions:
+- Update the control flags associated with button inputs
+- Process Bluetooth commands, converting them into values, which are used as PID controller 2's inputs to calculate motor PWM values.
+- Data is read from the MPU6050 using I2C. The tilt angle is calculated using both accelerometer and gyroscope data. A Kalman filter is appllied to minimize noise and improve data stability.
+- Two PID controllers are used to update the PWM values for channels A and B on each wheel
+- Finally, the program checks if the system is in a safe condition. It will set the calculated PWM values to the DRV8833 motor driver to control motors.
+
+For a more details, please check the source code
+
+
 
 
 
@@ -100,8 +110,7 @@ Before getting started with this project, you will need to prepare some stuffs:
 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/hungdaqq/Smarthome-IoT.git
-   ```
+   git clone https://github.com/bitbydat/Self-Balancing-Car.git
 2. Create a Thingsboard account at https://demo.thingsboard.io/ and login to use Thingsboard Live Demo server. Then go to [Thingsboard](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Thingsboard) for a quick overview of this open-source IoT platform.
 3. Follow the instructions to install [Thingsboard Edge CE](https://thingsboard.io/docs/user-guide/install/edge/installation-options/) v3.4.3 and provision your Edge to the Server.
 4. Get and install the ThingsBoardLive on [App Store](https://apps.apple.com/us/app/thingsboard-live/id1594355695) or [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.demo.app&hl=vi&gl=US).
