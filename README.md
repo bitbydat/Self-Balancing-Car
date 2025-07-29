@@ -74,6 +74,13 @@ Before getting started with this project, you will need to prepare some stuffs:
 |x02 18650 batteries| Two cells in series provide 7.4–8.1 V, suitable for LM2596 input to maintain a 5V output|
 |x01 robot chassis with wheels| Optional design depending on project scope|
 
+<div align="center">
+  <a href="https://github.com/bitbydat/Self-Balancing-Car">
+    <img src="images/flowchart.png" alt="Logo" width="500" height="700">
+  </a>
+</div>
+
+
 
 ### Installation
 
@@ -109,29 +116,16 @@ Before getting started with this project, you will need to prepare some stuffs:
 - [ ] Devices claming (QR code)
 - [ ] Data analytics with Trendz
 
-See the [open issues](https://github.com/hungdaqq/Smarthome-IoT/issues) for a full list of proposed features (and known issues).
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions to this project are welcome! If you have any ideas or suggestions, please feel free to open an issue or submit a pull request.
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
+I welcome contributions to this project. If you have suggestions, improvements, or new ideas, feel free to open an issue or submit a pull request. Your input is greatly appreciated and helps me improve.
 
 <!-- CONTACT -->
 ## Contact
 
-Quang Hung Dang - [@hungdaqq](https://www.linkedin.com/in/hungdaqq/) - hungdaqq@gmail.com
+Dat Duy Nguyen - datndng01@gmail.com
 
-Project Link: [https://github.com/hungdaqq/Smarthome-IoT/](https://github.com/hungdaqq/Smarthome-IoT/)
+Project Link: [https://github.com/bitbydat/Self-Balancing-Car/](https://github.com/bitbydat/Self-Balancing-Car/)
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-<p align="justify">
-This project would not have been possible without the support and resources provided by the open-source community. We would like to extend our gratitude to all the developers and organizations who have contributed to the development of the libraries and tools used in this project.
 </p>
