@@ -76,7 +76,7 @@ Before getting started with this project, you will need to prepare some stuffs:
 
 <div align="center">
   <a href="https://github.com/bitbydat/Self-Balancing-Car">
-    <img src="images/flowchart.png" alt="Logo" width="500" height="700">
+    <img src="images/flowchartv2.png" alt="Logo" width="600" height="800">
   </a>
 </div>
 
