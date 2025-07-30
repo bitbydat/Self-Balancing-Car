@@ -11,9 +11,9 @@
     A little DIY project. It falls more than it stands, but still looks pretty cool.
     <br />
     <br />
-    <a href="https://github.com/hungdaqq/Smarthome-IoT/issues">Report Bug</a>
+    <a href="https://github.com/bitbydat/Self-Balancing-Car/issues">Report Bug</a>
     ·
-    <a href="https://github.com/hungdaqq/Smarthome-IoT/issues">Request Feature</a>
+    <a href="https://github.com/bitbydat/Self-Balancing-Car/issues">Request Feature</a>
   </p>
 </div>
 
